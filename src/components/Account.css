@@ -1,0 +1,105 @@
+.account {
+    display: flex;
+    flex: 1;
+}
+
+.account-info {
+    width: 300px;
+    margin-right: 96px;
+    flex: 1;
+    text-align: center;
+}
+
+.account-info__img img {
+    border-radius: 50%;
+    max-width: 280px;
+}
+
+.account-info__name {
+    margin: 30px 0 12px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+}
+
+.account-info__login {
+    font-size: 18px;
+    line-height: 22px;
+    color: #0064EB;
+    text-decoration: none;
+}
+
+.account-info__foll {
+    display: flex;
+    margin-top: 30px;
+}
+
+.account-info__foll-owers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.account-info__foll-owers span,
+.account-info__foll-owers span {
+    margin: 0 5px 0 7px;
+}
+
+.account-info__foll-owers:first-child {
+    margin-right: 25px;
+}
+
+.account-repos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-repos__empty {
+    text-align: center;
+}
+
+.account-repos__empty img {
+    height: 62px;
+    width: 76px;
+}
+
+.account-repos__empty p {
+    font-size: 22px;
+    line-height: 140%;
+    color: #808080;
+    margin-top: 48px;
+}
+
+.account-repos__repos-list h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 29px;
+}
+
+@media (max-width: 920px) {
+    .account {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .account-repos {
+        margin-top: 30px;
+    }
+
+    .account-info {
+        max-width: 200px;
+        margin-right: 0px;
+        margin: 0 auto;
+    }
+
+    .account-info__img img {
+        max-width: 180px;
+    }
+}
