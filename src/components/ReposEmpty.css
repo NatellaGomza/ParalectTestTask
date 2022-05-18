@@ -9,7 +9,7 @@
     margin-top: 24px;
 }
 
-.repositories .repos__title {
+.repositories .repos-title {
     display: inline-block;
     font-weight: 500;
     font-size: 24px;
@@ -19,13 +19,13 @@
     text-decoration: none;
 }
 
-.repositories .repos__desc {
+.repositories .repos-description {
     font-size: 16px;
     line-height: 19px;
 }
 
 @media (max-width: 920px) {
-    .repositories .repos__desc {
+    .repositories .repos-description {
         font-size: 11px;
     }
 }

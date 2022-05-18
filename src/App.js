@@ -10,7 +10,7 @@ function App() {
   const { request } = useHttp()
   const [currentPage, setCurrentPage] = useState('')
   const [user, setUser] = useState('')
-  const [candidateInfo, setCandidateInfo] = useState({})
+  const [repoOwnerInfo, setrepoOwnerInfo] = useState({})
 
   const viewPage = page => {
     if (page === 'Error') {
@@ -18,7 +18,7 @@ function App() {
     }
 
     if (page === 'Account') {
-      return <Account candidateInfo={candidateInfo} />
+      return <Account repoOwnerInfo={repoOwnerInfo} />
     }
 
     return <Home />
@@ -28,14 +28,14 @@ function App() {
 
   const pressHandler = async e => {
     if (e.key === 'Enter') {
-      const candidate = await request(`https://api.github.com/users/${user}`)
+      const repoOwner = await request(`https://api.github.com/users/${user}`)
 
-      if (candidate.message === 'Not Found') {
+      if (repoOwner.message === 'Not Found') {
         return setCurrentPage('Error')
       }
 
       setCurrentPage('Account')
-      setCandidateInfo(candidate)
+      setrepoOwnerInfo(repoOwner)
     }
   }
 

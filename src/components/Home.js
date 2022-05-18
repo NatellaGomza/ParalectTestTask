@@ -3,11 +3,11 @@ import search from '../img/search-big.png'
 
 export const Home = () => (
 	<div className="home">
-		<div className="home__img">
+		<div className="home-img">
 			<img src={search} alt="Search" />
 		</div>
-		<p className="home__text">
+		<div className="home-text">
 			Start with searching a GitHub user
-			</p>
+			</div>
 	</div>
 )

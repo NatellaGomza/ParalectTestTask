@@ -3,11 +3,11 @@ import user from '../img/user.png'
 
 export const Error = () => (
 	<div className="error">
-		<div className="error__img">
+		<div className="error-img">
 			<img src={user} alt="User" />
 		</div>
-		<p className="error__text">
+		<div className="error-text">
 			User not found
-			</p>
+			</div>
 	</div>
 )

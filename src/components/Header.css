@@ -8,15 +8,15 @@
     align-items: center;
 }
 
-.header__logo {
+.header-logo {
     margin-right: 22px;
 }
 
-.header__search {
+.header-search {
     position: relative;
 }
 
-.header__search input {
+.header-search input {
     padding: 0 44px;
     width: 500px;
     height: 40px;
@@ -27,7 +27,7 @@
     font-size: 14px;
 }
 
-.header__search img {
+.header-search img {
     position: absolute;
     top: 50%;
     left: 19px;
@@ -37,12 +37,16 @@
 
 @media (max-width: 920px) {
     .header {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .header__search input {
-        width: 220px;
+    .header-search input {
+        width: 210px;
         padding: 0 5px 0 44px;
+    }
+
+    .header-logo {
+        margin-right: 10px;
     }
     
 }

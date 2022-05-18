@@ -10,31 +10,31 @@
     text-align: center;
 }
 
-.account-info__img img {
+.account-img img {
     border-radius: 50%;
     max-width: 280px;
 }
 
-.account-info__name {
+.account-name {
     margin: 30px 0 12px;
     font-weight: 600;
     font-size: 26px;
     line-height: 130%;
 }
 
-.account-info__login {
+.account-login {
     font-size: 18px;
     line-height: 22px;
     color: #0064EB;
     text-decoration: none;
 }
 
-.account-info__foll {
+.account-followings {
     display: flex;
     margin-top: 30px;
 }
 
-.account-info__foll-owers {
+.account-followers {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,12 +42,12 @@
     line-height: 150%;
 }
 
-.account-info__foll-owers span,
-.account-info__foll-owers span {
+.account-followers span,
+.account-followers span {
     margin: 0 5px 0 7px;
 }
 
-.account-info__foll-owers:first-child {
+.account-followers:first-child {
     margin-right: 25px;
 }
 
@@ -59,23 +59,23 @@
     justify-content: center;
 }
 
-.account-repos__empty {
+.account-repos-empty {
     text-align: center;
 }
 
-.account-repos__empty img {
+.account-repos-empty img {
     height: 62px;
     width: 76px;
 }
 
-.account-repos__empty p {
+.account-repos-empty p {
     font-size: 22px;
     line-height: 140%;
     color: #808080;
     margin-top: 48px;
 }
 
-.account-repos__repos-list h2 {
+.account-repos-list h2 {
     font-weight: 600;
     font-size: 32px;
     line-height: 130%;
@@ -99,7 +99,7 @@
         margin: 0 auto;
     }
 
-    .account-info__img img {
+    .account-img img {
         max-width: 180px;
     }
 }

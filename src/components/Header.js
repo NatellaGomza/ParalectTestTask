@@ -6,11 +6,11 @@ import search from '../img/search-small.png'
 export const Header = ({ changeHandler, pressHandler }) => {
 	return (
 		<header className="header">
-			<div className="header__logo">
+			<div className="header-logo">
 				<img src={logo} alt="Logo" />
 			</div>
 
-			<div className="header__search">
+			<div className="header-search">
 				<img src={search} alt="Search" />
 				<input
 					type="text"

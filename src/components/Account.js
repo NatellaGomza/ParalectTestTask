@@ -12,7 +12,7 @@ import { Pagination } from './Pagination'
 
 export const Account = (user) => {
 	const { request, loading } = useHttp()
-	const candidate = user.candidateInfo
+	const repoOwner = user.repoOwnerInfo
 	const [repos, setRepos] = useState([])
 
 	const [curPage, setCurPage] = useState(0)
@@ -30,11 +30,11 @@ export const Account = (user) => {
 	useEffect(() => {
 		setCurPage(0)
 		const fetched = async () => {
-			const res = await request(`https://api.github.com/users/${candidate.login}/repos`)
+			const res = await request(`https://api.github.com/users/${repoOwner.login}/repos`)
 			setRepos(res)
 		}
 		fetched()
-	}, [candidate.login, request])
+	}, [repoOwner.login, request])
 
 	if (loading) {
 		return <Loader />
@@ -43,21 +43,21 @@ export const Account = (user) => {
 	return (
 		<div className="account">
 			<div className="account-info">
-				<div className="account-info__img">
-					<img src={candidate.avatar_url} alt="User" />
+				<div className="account-img">
+					<img src={repoOwner.avatar_url} alt="User" />
 				</div>
-				<h4 className="account-info__name">{candidate.name}</h4>
-				<a target="_blank" rel="noreferrer" href={candidate.html_url} className="account-info__login">{candidate.login}</a>
+				<h4 className="account-name">{repoOwner.name}</h4>
+				<a target="_blank" rel="noreferrer" href={repoOwner.html_url} className="account-login">{repoOwner.login}</a>
 
-				<div className="account-info__foll">
-					<div className="account-info__foll-owers">
+				<div className="account-followings">
+					<div className="account-followers">
 						<img src={followers} alt="followers" />
-						<span className="followers-count">{candidate.followers} followers</span>
+						<span className="followers-count">{repoOwner.followers} followers</span>
 					</div>
 
-					<div className="account-info__foll-owers">
+					<div className="account-followers">
 						<img src={following} alt="following" />
-						<span className="following-count">{candidate.following} following</span>
+						<span className="following-count">{repoOwner.following} following</span>
 					</div>
 				</div>
 			</div>
