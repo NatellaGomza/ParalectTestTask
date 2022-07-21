@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate'
 
-export const Pagination = ({ pageCount, changePage, reposLen, perPage, curPage }) => {
+export const Pagination = ({ pageCount, changePage}) => {
 	return (
 		<div className="paginate">
 
